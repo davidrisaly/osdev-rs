@@ -1,0 +1,13 @@
+[build]
+target = "i686-unknown-linux-gnu"
+# target = "x86_64-unknown-none"
+
+[target.i686-unknown-linux-gnu]
+linker = "ld.lld"
+runner = "qemu-system-i386 -kernel"
+rustflags = [
+    "-Cpanic=abort",
+    "-Copt-level=2",
+    "-Clink-arg=-Tsrc/linker.ld",
+    "-Clink-arg=-no-pie",
+]
