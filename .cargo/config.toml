@@ -8,6 +8,6 @@ runner = "qemu-system-i386 -kernel"
 rustflags = [
     "-Cpanic=abort",
     "-Copt-level=2",
-    "-Clink-arg=-Tsrc/linker.ld",
+    "-Clink-arg=-Tscripts/linker.ld",
     "-Clink-arg=-no-pie",
 ]
